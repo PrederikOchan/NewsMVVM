@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/homeFragment">
+
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.home.HomeFragment"
+            android:label="@string/home"
+            tools:layout="@layout/home_fragment"/>
+    <fragment
+            android:id="@+id/businessFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.business.BusinessFragment"
+            android:label="@string/business"
+            tools:layout="@layout/business_fragment"/>
+    <fragment
+            android:id="@+id/entertainmentFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.entertainment.EntertainmentFragment"
+            android:label="@string/entertainment"
+            tools:layout="@layout/entertainment_fragment"/>
+    <fragment
+            android:id="@+id/healthFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.health.HealthFragment"
+            android:label="@string/health"
+            tools:layout="@layout/health_fragment"/>
+    <fragment
+            android:id="@+id/scienceFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.science.ScienceFragment"
+            android:label="@string/science"
+            tools:layout="@layout/science_fragment"/>
+    <fragment
+            android:id="@+id/sportsFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.sports.SportsFragment"
+            android:label="@string/sports"
+            tools:layout="@layout/sports_fragment"/>
+    <fragment
+            android:id="@+id/technologyFragment"
+            android:name="com.rozedfrozzy.newsmvvm.ui.technology.TechnologyFragment"
+            android:label="@string/technology"
+            tools:layout="@layout/technology_fragment"/>
+</navigation>
