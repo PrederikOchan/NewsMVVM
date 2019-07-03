@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.rozedfrozzy.newsmvvm.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,11 +25,23 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
         setSupportActionBar(toolbar)
 
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        navController = findNavController(R.id.nav_host_fragment)
 
-        NavigationUI.setupWithNavController(navigationDrawer, navController)
+        val config = AppBarConfiguration(
+            setOf(
+                R.id.homeFragment,
+                R.id.businessFragment,
+                R.id.entertainmentFragment,
+                R.id.healthFragment,
+                R.id.scienceFragment,
+                R.id.sportsFragment,
+                R.id.technologyFragment
+            ),
+            drawerLayout
+        )
 
-        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+        navigationDrawer.setupWithNavController(navController)
+        toolbar.setupWithNavController(navController, config)
 
     }
 

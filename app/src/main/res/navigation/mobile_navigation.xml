@@ -9,7 +9,26 @@
             android:id="@+id/homeFragment"
             android:name="com.rozedfrozzy.newsmvvm.ui.home.HomeFragment"
             android:label="@string/home"
-            tools:layout="@layout/home_fragment"/>
+            tools:layout="@layout/home_fragment">
+        <action
+                android:id="@+id/action_homeFragment_to_healthFragment"
+                app:destination="@id/healthFragment"/>
+        <action
+                android:id="@+id/action_homeFragment_to_scienceFragment"
+                app:destination="@id/scienceFragment"/>
+        <action
+                android:id="@+id/action_homeFragment_to_entertainmentFragment"
+                app:destination="@id/entertainmentFragment"/>
+        <action
+                android:id="@+id/action_homeFragment_to_businessFragment2"
+                app:destination="@id/businessFragment"/>
+        <action
+                android:id="@+id/action_homeFragment_to_sportsFragment"
+                app:destination="@id/sportsFragment"/>
+        <action
+                android:id="@+id/action_homeFragment_to_technologyFragment"
+                app:destination="@id/technologyFragment"/>
+    </fragment>
     <fragment
             android:id="@+id/businessFragment"
             android:name="com.rozedfrozzy.newsmvvm.ui.business.BusinessFragment"
